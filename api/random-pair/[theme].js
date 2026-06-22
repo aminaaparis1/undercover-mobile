@@ -1,4 +1,4 @@
-import { INITIAL_THEMES } from '../../database/words.js';
+import { INITIAL_THEMES } from '../database/words.js';
 
 export default function handler(req, res) {
     const { theme } = req.query;
