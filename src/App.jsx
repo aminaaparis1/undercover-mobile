@@ -101,6 +101,9 @@ function App() {
         try {
             const response = await fetch(`${API_URL}/themes?_t=${Date.now()}`);
             const data = await response.json();
+
+            console.log("PAIR API:", JSON.stringify(data, null, 2));
+
             if (data.success) {
                 const mergedThemes = { ...data.themes };
                 
@@ -287,8 +290,8 @@ function App() {
                     const response = await fetch(`${API_URL}/random-pair/${themeToFetch}?_t=${Date.now()}`);
                     const data = await response.json();
                     if (data.success) {
-                        chosenPair = data.pair;
-                    }
+    chosenPair = data.pair;
+}
                 } catch (err) {
                     console.warn("Échec de connexion serveur.");
                 }
