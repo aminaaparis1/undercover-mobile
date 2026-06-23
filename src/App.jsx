@@ -287,7 +287,7 @@ function App() {
                 chosenPair = localPairsForTheme[randIndex];
             } else {
                 try {
-                    const response = await fetch(`${API_URL}/random-pair/${themeToFetch}?_t=${Date.now()}`);
+                    const response = await fetch(`${API_URL}/random-pair?theme=${themeToFetch}&_t=${Date.now()}`);
                     const data = await response.json();
                     if (data.success) {
     chosenPair = data.pair;
